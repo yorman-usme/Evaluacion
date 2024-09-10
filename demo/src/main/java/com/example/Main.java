@@ -16,7 +16,6 @@ public class Main {
 
         double resultado = 0;
 
-
         if (operacion == '+') {
             resultado = numero1 + numero2;
         }else if (operacion == '-') {
@@ -24,20 +23,17 @@ public class Main {
         }else if (operacion == '*') {
             resultado = numero1 * numero2;
         }else if (operacion == '/') {
-            resultado = numero1 / numero2;
-        }else if (operacion == '%') {
-            resultado = numero1 + numero2;
-        }else {
-            System.out.println("ERROR");
-        // }else if (operacion == '%') {
-
-        //     // resultado: numero1 % numero2;
-        // }else {
-        //     System.out.println("Error");
-         }
-        System.out.println("el resultado es: " + resultado);
-    
-            
+            if (numero2 != 0) {
+                resultado= numero1/numero2;
+            }else {
+                System.out.println("ERROR");
+                
         }
+            
+        }else if (operacion == '%') {
+            resultado= numero1%numero2;
+        }
+        System.out.println("el resultado es: " + resultado);
 
     }
+}
